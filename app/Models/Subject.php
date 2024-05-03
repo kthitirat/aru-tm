@@ -42,23 +42,23 @@ class Subject extends Model implements HasMedia
     //     });
     // }
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection(self::MEDIA_COLLECTION_IMAGE)->singleFile()
-            ->registerMediaConversions(function (Media $media) {
-                $this
-                    ->addMediaConversion('optimized')
-                    ->fit(Manipulations::FIT_MAX, 1072, 1528)
-                    ->optimize()
-                    ->keepOriginalImageFormat();
-            });
+    // public function registerMediaCollections(): void
+    // {
+    //     $this->addMediaCollection(self::MEDIA_COLLECTION_IMAGE)->singleFile()
+    //         ->registerMediaConversions(function (Media $media) {
+    //             $this
+    //                 ->addMediaConversion('optimized')
+    //                 ->fit(Manipulations::FIT_MAX, 1072, 1528)
+    //                 ->optimize()
+    //                 ->keepOriginalImageFormat();
+    //         });
 
-        $this->addMediaCollection(self::MEDIA_COLLECTION_DOCUMENTS);
-    }
+    //     $this->addMediaCollection(self::MEDIA_COLLECTION_DOCUMENTS);
+    // }
 
     public function professors()
     {
-        return $this->belongsToMany(Professor::class);
+        return $this->belongsToMany(Professor::class);      //One-to-One
     }
 
     public function scopeFilter(Builder $query, array $filters): void
