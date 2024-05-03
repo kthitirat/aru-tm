@@ -5,7 +5,7 @@
                 <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-700">เอกสารประกอบการสอน</h1>
                 <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-600">(PowerPoint)</h1>
             </div>
-            <div class="w-full px-4 md:px-6 lg:px-10 xl:px-16">
+            <div class="w-full px-4 md:px-6 lg:px-10 xl:px-16 mt-8">
                 <label class="form-control w-full max-w-xs">
                     <input ref="searchInputRef" v-model="search" class="input input-bordered w-full max-w-xs"
                            placeholder="ค้นหา..."

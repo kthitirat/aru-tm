@@ -27,20 +27,20 @@ class Subject extends Model implements HasMedia
         'unit',
         'published_at',
         'view',
-        'uuid'
+        //'uuid'
     ];
     protected $casts = [
         'published_at' => 'datetime',
         'view' => 'integer',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($subject) {
-            $subject->uuid = Str::uuid();
-        });
-    }
+    // protected static function boot()
+    // {
+    //     parent::boot();
+    //     static::creating(function ($subject) {
+    //         $subject->uuid = Str::uuid();
+    //     });
+    // }
 
     public function registerMediaCollections(): void
     {

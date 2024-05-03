@@ -19,7 +19,7 @@ class ProfessorFactory extends Factory
     {
         return [
             'department_id' => Department::inRandomOrder()->first()?->id ?? Department::factory(),
-            'prefix' => $this->faker->randomElement(['ดร.', 'ผศ.ดร.', 'รศ.ดร.', 'ศ.']),
+            'prefix' => $this->faker->randomElement(['ศ.', 'รศ.', 'ผศ.', 'ศ.ดร.', 'รศ.ดร.', 'ผศ.ดร.', 'ดร.']),
             'first_name' => $this->faker->firstName,
             'last_name' => $this->faker->lastName
         ];
